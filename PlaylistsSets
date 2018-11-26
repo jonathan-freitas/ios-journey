@@ -1,0 +1,26 @@
+import UIKit
+
+class song {
+    
+    var id = 0
+    var name = ""
+    
+    init(id: Int, name: String){
+        self.id = id
+        self.name = name
+    }
+    
+}
+
+let songUm: song = song(id: 01, name: "believe")
+let songDois: song = song(id: 02, name: "pick up")
+let songTres: song = song(id: 03, name: "break up")
+let songQuatro: song = song(id: 04, name: "truck")
+let songCinco: song = song(id: 05, name: "gas")
+
+let playlistUm: Set = [songUm.id, songDois.id, songTres.id]
+let playlistDois: Set = [songTres.id, songQuatro.id, songCinco.id]
+
+let playlistTres: Set = playlistUm.intersection(playlistDois)
+let playlistQuatro: Set = playlistUm.symmetricDifference(playlistDois)
+
